@@ -16,7 +16,7 @@ for line in open('data_seg.txt'):
     label_id = id_map[label][0]
     target.append([label_id])
     wordList = lineList[:len(lineList)-1]
-    wordvec = np.zeros(100*ngram)
+    wordvec = np.zeros(100*ngrams)
     for ngram in range(1,ngrams+1):
         if len(wordList)>=ngram:
             for i in range(0,len(wordList)-ngram):
